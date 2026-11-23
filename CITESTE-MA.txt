@@ -1,0 +1,58 @@
+qBittorrent Monitor 1.0 – monitorizează și controlează qBittorrent din Google Chrome
+© 2026 Fallen
+
+Ce face
+-------
+Apeși pe iconița din bara de extensii și vezi ce se întâmplă pe serverul tău
+qBittorrent: ce descarcă, vitezele, progresul (bară + procent), ETA, ratio, ce
+s-a terminat. Poți opri / porni torrentele, le poți șterge, adăuga altele noi
+și vedea detalii (fișiere, trackere, peers). Funcționează cu qBittorrent 5.x
+(Web UI activat). Nimic nu pleacă în altă parte decât spre serverul tău.
+
+Instalare (o singură dată)
+--------------------------
+1. Pune folderul qbittorrent-monitor într-un loc fix, de exemplu
+   C:\Users\<tu>\Apps\qbittorrent-monitor
+   (nu-l muta și nu-l șterge după instalare: Chrome îl citește de acolo).
+2. În Chrome deschide  chrome://extensions
+3. Pornește „Modul pentru dezvoltatori” (dreapta sus).
+4. „Încarcă extensia neîmpachetată” → alege folderul qbittorrent-monitor
+   (cel cu manifest.json).
+5. Apasă pe piesa de puzzle din bara Chrome → pinează extensia.
+6. Deschide Setările (⚙ din popup): adresa Web UI (ex. https://host:8080),
+   utilizator, parolă → „Salvează & testează”. Chrome cere permisiunea de a
+   accesa acel server: acceptă-o.
+   Limba (Română / English) se alege tot de acolo.
+
+Folosire
+--------
+- Click pe un torrent = îl extinde (Info, Fișiere, Trackere, Peers, prioritate,
+  forțare start, reverificare). Click din nou = îl închide.
+- ⏸ / ▶ = oprește / pornește; 🗑 = șterge (cu sau fără fișiere, cu confirmare).
+- Sus: ▶ / ⏸ pornește / oprește tot, 🐢 limite de viteză alternative,
+  ＋ adaugă torrent (magnet, URL sau fișier .torrent, cu categorie și folder).
+- Poți trage un fișier .torrent (sau un link) peste fereastra extensiei.
+- Click dreapta pe un link → „Trimite la qBittorrent”.
+- Linkurile magnet: și .torrent din pagini pot fi trimise automat la click
+  (se poate opri din Setări).
+- Pe iconiță apare numărul total de torrente (albastru cât timp se descarcă
+  ceva, gri altfel); ținând mouse-ul pe ea vezi „descarcă / total”.
+- Primești o notificare când se termină o descărcare.
+
+Bine de știut
+-------------
+- Cu fereastra închisă, numărul de pe iconiță și notificările se actualizează
+  la 30 de secunde.
+- Parola serverului se păstrează în Chrome, pe calculatorul tău, necriptată.
+  Poți folosi un cont qBittorrent separat pentru extensie.
+- Dacă scoți extensia (Elimină) din Chrome, se șterg și setările ei. Pentru o
+  versiune nouă: înlocuiești fișierele din folder și apeși „Reîncarcă” (↻) pe
+  cardul extensiei din chrome://extensions – setările rămân.
+- La pornire Chrome poate afișa un avertisment despre extensiile în modul
+  dezvoltator; e normal pentru extensiile instalate așa, îl poți închide.
+
+Istoric versiuni
+----------------
+1.0 – prima versiune: listă live, control (oprire / pornire / ștergere),
+      detalii, adăugare (buton, drag & drop, meniu click dreapta, interceptare
+      linkuri), notificări, română + engleză.

@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<title>qBittorrent Monitor</title>
+<link rel="stylesheet" href="popup.css">
+<style>
+  body { width: auto; max-width: 520px; margin: 32px auto; padding: 0 16px; }
+  label { display: block; margin: 12px 0 4px; font-weight: 600; }
+  label.chk { font-weight: 400; display: flex; gap: 8px; align-items: center; }
+  input[type=text], input[type=password], input[type=number], select { width: 100%; box-sizing: border-box; }
+  #status { margin-top: 12px; min-height: 1.4em; }
+  #status.err { color: var(--err); } #status.ok { color: var(--ok); }
+  button.primary { margin-top: 16px; padding: 6px 16px; }
+</style>
+<h2 data-i="o_title"></h2>
+<label data-i="o_url"></label>
+<input id="url" type="text" placeholder="https://host:port">
+<label data-i="o_user"></label>
+<input id="user" type="text" autocomplete="username">
+<label data-i="o_pass"></label>
+<input id="pass" type="password" autocomplete="current-password">
+<label data-i="o_lang"></label>
+<select id="lang"><option value="auto" data-i="o_auto"></option><option value="ro">Română</option><option value="en">English</option></select>
+<label data-i="o_refresh"></label>
+<input id="refresh" type="number" min="1" max="30">
+<label class="chk"><input id="intercept" type="checkbox"><span data-i="o_intercept"></span></label>
+<label class="chk"><input id="notify" type="checkbox"><span data-i="o_notify"></span></label>
+<button id="save" class="primary" data-i="o_save"></button>
+<div id="status"></div>
+<script type="module" src="options.js"></script>

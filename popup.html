@@ -1,0 +1,51 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<title>qBittorrent</title>
+<link rel="stylesheet" href="popup.css">
+<header>
+  <div id="speeds"><b id="dl">↓ 0 B/s</b><b id="ul">↑ 0 B/s</b><span id="free"></span></div>
+  <div class="hb">
+    <button id="alt" data-t="altSpeed">🐢</button>
+    <button id="startAll" data-t="startAll">▶</button>
+    <button id="stopAll" data-t="stopAll">⏸</button>
+    <button id="addBtn" data-t="add">＋</button>
+    <button id="gear" data-t="settings">⚙</button>
+  </div>
+</header>
+<div id="bar2">
+  <input id="q" type="search" data-p="search">
+  <select id="sort"></select>
+  <button id="dir">↓</button>
+</div>
+<nav id="filters"></nav>
+<div id="err" hidden></div>
+<main id="list"></main>
+<div id="empty" hidden></div>
+<div id="toast" hidden></div>
+<div id="drop" hidden><span data-i="dropHere"></span></div>
+
+<dialog id="delD">
+  <h3 data-i="delTitle"></h3>
+  <p id="delName"></p>
+  <div class="row">
+    <button id="delCancel" data-i="cancel"></button>
+    <button id="delOnly" data-i="del"></button>
+    <button id="delAll" class="danger" data-i="delFiles"></button>
+  </div>
+</dialog>
+
+<dialog id="addD">
+  <h3 data-i="addTitle"></h3>
+  <textarea id="aUrls" rows="4" data-p="addHint"></textarea>
+  <label class="file"><input id="aFiles" type="file" accept=".torrent" multiple></label>
+  <select id="aCat"></select>
+  <input id="aPath" type="text" data-p="savePath">
+  <label class="chk"><input id="aStop" type="checkbox"><span data-i="startStopped"></span></label>
+  <div id="aErr" class="errtxt"></div>
+  <div class="row">
+    <button id="aCancel" data-i="cancel"></button>
+    <button id="aOk" class="primary" data-i="send"></button>
+  </div>
+</dialog>
+<script type="module" src="popup.js"></script>
